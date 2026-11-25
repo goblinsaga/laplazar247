@@ -1,9 +1,12 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ==========================================
+   GLOBAL
+========================================== */
 
 :root {
   color-scheme: dark;
@@ -22,14 +25,13 @@ body {
   background: #080808;
   color: #f5f5f5;
   font-family: 'Rajdhani', sans-serif;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
-::selection {
-  background: #FFD500;
-  color: #080808;
-}
-
-button, input {
+button,
+input {
   font: inherit;
 }
 
@@ -40,6 +42,15 @@ button {
 .font-gaming {
   font-family: 'Orbitron', sans-serif;
 }
+
+::selection {
+  background: #FFD500;
+  color: #080808;
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
 
 ::-webkit-scrollbar {
   width: 6px;
@@ -56,4 +67,206 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #fff000;
+}
+
+/* ==========================================
+   THEME TRANSITIONS
+========================================== */
+
+.theme-root,
+.theme-root header,
+.theme-root aside,
+.theme-root article,
+.theme-root button,
+.theme-root input {
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* ==========================================
+   LIGHT MODE
+========================================== */
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+html[data-theme="light"] body {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #e5e7eb;
+}
+
+/* MAIN */
+
+html[data-theme="light"] .theme-root {
+  background: #f3f4f6 !important;
+  color: #111827 !important;
+}
+
+/* SIDEBAR */
+
+html[data-theme="light"] .theme-root aside {
+  background-color: rgba(255, 255, 255, 0.97);
+  border-color: #e5e7eb;
+}
+
+html[data-theme="light"] .theme-root aside > div > div:first-child {
+  border-color: #e5e7eb;
+}
+
+/* HEADER */
+
+html[data-theme="light"] .theme-root header {
+  background-color: rgba(255, 255, 255, 0.94);
+  border-color: #e5e7eb;
+}
+
+/* GENERAL BACKGROUNDS */
+
+html[data-theme="light"] .theme-root [class*="bg-[#080808]"],
+html[data-theme="light"] .theme-root [class*="bg-[#101010]"],
+html[data-theme="light"] .theme-root [class*="bg-[#141414]"],
+html[data-theme="light"] .theme-root [class*="bg-[#1c1c1c]"],
+html[data-theme="light"] .theme-root [class*="bg-[#242424]"] {
+  background-color: #ffffff !important;
+}
+
+html[data-theme="light"] .theme-root [class*="bg-white/"] {
+  background-color: #f8fafc !important;
+}
+
+html[data-theme="light"] .theme-root [class*="bg-black/"] {
+  background-color: #eef0f3 !important;
+}
+
+/* HERO */
+
+html[data-theme="light"] .theme-root [class*="bg-gradient-to-br"] {
+  background-color: #ffffff !important;
+  background-image: linear-gradient(
+    135deg,
+    #fff9df 0%,
+    #ffffff 52%,
+    #f4f5f7 100%
+  ) !important;
+}
+
+/* TEXT */
+
+html[data-theme="light"] .theme-root [class*="text-white"] {
+  color: #111827 !important;
+}
+
+html[data-theme="light"] .theme-root [class*="text-slate-100"],
+html[data-theme="light"] .theme-root [class*="text-slate-200"],
+html[data-theme="light"] .theme-root [class*="text-slate-300"] {
+  color: #1f2937 !important;
+}
+
+html[data-theme="light"] .theme-root [class*="text-slate-400"] {
+  color: #475569 !important;
+}
+
+html[data-theme="light"] .theme-root [class*="text-slate-500"] {
+  color: #64748b !important;
+}
+
+html[data-theme="light"] .theme-root [class*="text-slate-600"] {
+  color: #94a3b8 !important;
+}
+
+/* BORDERS */
+
+html[data-theme="light"] .theme-root [class*="border-white"] {
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+/* SEARCH INPUT */
+
+html[data-theme="light"] .theme-root input {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+  border-color: #d1d5db !important;
+}
+
+html[data-theme="light"] .theme-root input::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* RULE CARDS */
+
+html[data-theme="light"] .theme-root article {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+html[data-theme="light"] .theme-root article:hover {
+  border-color: rgba(196, 154, 0, 0.45) !important;
+}
+
+/* SELECTED / EXPANDED RULE */
+
+html[data-theme="light"] .theme-root article[class*="border-yellow-400/25"] {
+  background-color: #fffdf5 !important;
+  border-color: rgba(196, 154, 0, 0.4) !important;
+}
+
+/* NAVIGATION */
+
+html[data-theme="light"] .theme-root nav button:not([class*="bg-yellow"]) {
+  color: #475569;
+}
+
+html[data-theme="light"] .theme-root nav button:hover {
+  background-color: #f1f5f9 !important;
+}
+
+html[data-theme="light"] .theme-root nav button[class*="bg-yellow"] {
+  background-color: rgba(234, 179, 8, 0.12) !important;
+  color: #946f00 !important;
+}
+
+/* SIDEBAR FOOTER */
+
+html[data-theme="light"] .theme-root aside [class*="border-yellow-400/10"] {
+  background-color: #fffdf5 !important;
+  border-color: rgba(196, 154, 0, 0.2) !important;
+}
+
+/* MOBILE MENU OVERLAY */
+
+html[data-theme="light"] .theme-root [class*="bg-black/80"] {
+  background-color: rgba(15, 23, 42, 0.45) !important;
+}
+
+/* THEME BUTTON */
+
+html[data-theme="light"] .theme-root header button {
+  border-color: #e2e8f0;
+}
+
+html[data-theme="light"] .theme-root header button:hover {
+  background-color: #fff8dc !important;
+}
+
+/* SECTION NAVIGATION */
+
+html[data-theme="light"] .theme-root footer {
+  border-color: #e2e8f0;
+}
+
+/* LIGHT MODE SCROLLBAR */
+
+html[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #c49a00;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: #a98200;
 }
