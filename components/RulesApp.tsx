@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
@@ -20,6 +19,8 @@ import {
   CheckCircle2,
   Hash,
   ArrowUpRight,
+  Sun,
+  Moon,
 } from "lucide-react";
 
 import { ruleSections } from "@/data/rules";
@@ -42,12 +43,39 @@ const iconMap: Record<string, React.ElementType> = {
   "book-open": BookOpen,
 };
 
+type Theme = "dark" | "light";
+
 export default function RulesApp() {
   const [active, setActive] = useState(ruleSections[0].id);
   const [query, setQuery] = useState("");
   const [mobileOpen, setMobileOpen] = useState(false);
   const [expanded, setExpanded] = useState<string[]>([]);
   const [showAll, setShowAll] = useState(false);
+  const [theme, setTheme] = useState<Theme>("dark");
+  const [themeReady, setThemeReady] = useState(false);
+
+  // Cargar tema guardado
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("pzrp-theme");
+
+    if (savedTheme === "light" || savedTheme === "dark") {
+      setTheme(savedTheme);
+    }
+
+    setThemeReady(true);
+  }, []);
+
+  // Aplicar tema y guardar preferencia
+  useEffect(() => {
+    if (!themeReady) return;
+
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem("pzrp-theme", theme);
+  }, [theme, themeReady]);
+
+  const toggleTheme = () => {
+    setTheme((current) => (current === "dark" ? "light" : "dark"));
+  };
 
   const activeSection =
     ruleSections.find((section) => section.id === active) ?? ruleSections[0];
@@ -148,10 +176,11 @@ export default function RulesApp() {
             <button
               key={section.id}
               onClick={() => selectSection(section.id)}
-              className={`group flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left transition-all duration-200 ${selected
-                ? "border border-yellow-400/20 bg-yellow-400/[0.09] text-yellow-200 shadow-[inset_3px_0_0_#FFD500]"
-                : "border border-transparent text-slate-400 hover:border-white/[0.06] hover:bg-white/[0.04] hover:text-white"
-                }`}
+              className={`group flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left transition-all duration-200 ${
+                selected
+                  ? "border border-yellow-400/20 bg-yellow-400/[0.09] text-yellow-200 shadow-[inset_3px_0_0_#FFD500]"
+                  : "border border-transparent text-slate-400 hover:border-white/[0.06] hover:bg-white/[0.04] hover:text-white"
+              }`}
             >
               <Icon
                 size={16}
@@ -167,8 +196,9 @@ export default function RulesApp() {
               </span>
 
               <span
-                className={`text-[10px] ${selected ? "text-yellow-400" : "text-slate-600"
-                  }`}
+                className={`text-[10px] ${
+                  selected ? "text-yellow-400" : "text-slate-600"
+                }`}
               >
                 {String(index + 1).padStart(2, "0")}
               </span>
@@ -194,7 +224,7 @@ export default function RulesApp() {
   );
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#080808] text-slate-100">
+    <main className="theme-root min-h-screen overflow-hidden bg-[#080808] text-slate-100">
       {/* BACKGROUND EFFECTS */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
         <div className="absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full bg-yellow-400/[0.045] blur-[120px]" />
@@ -264,6 +294,24 @@ export default function RulesApp() {
               </div>
 
               <div className="flex-1" />
+
+              {/* THEME TOGGLE */}
+              <button
+                onClick={toggleTheme}
+                aria-label={
+                  theme === "dark"
+                    ? "Activar modo claro"
+                    : "Activar modo oscuro"
+                }
+                title={
+                  theme === "dark"
+                    ? "Activar modo claro"
+                    : "Activar modo oscuro"
+                }
+                className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-white/[0.035] text-yellow-400 transition-all duration-200 hover:border-yellow-400/40 hover:bg-yellow-400/10 hover:shadow-[0_0_18px_rgba(255,213,0,0.08)]"
+              >
+                {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
+              </button>
 
               {/* SEARCH */}
               <div className="relative w-full max-w-[420px]">
@@ -477,20 +525,22 @@ export default function RulesApp() {
                         <motion.article
                           key={rule.title}
                           layout
-                          className={`overflow-hidden rounded-xl border transition-all duration-200 ${isOpen
-                            ? "border-yellow-400/25 bg-[#1c1c1c] shadow-[0_0_25px_rgba(255,213,0,0.035)]"
-                            : "border-white/[0.08] bg-[#141414]/90 hover:border-yellow-400/20"
-                            }`}
+                          className={`overflow-hidden rounded-xl border transition-all duration-200 ${
+                            isOpen
+                              ? "border-yellow-400/25 bg-[#1c1c1c] shadow-[0_0_25px_rgba(255,213,0,0.035)]"
+                              : "border-white/[0.08] bg-[#141414]/90 hover:border-yellow-400/20"
+                          }`}
                         >
                           <button
                             onClick={() => toggleRule(rule.title)}
                             className="flex w-full items-center gap-4 px-4 py-4 text-left sm:px-5"
                           >
                             <span
-                              className={`grid h-9 w-9 shrink-0 place-items-center rounded-lg text-xs font-bold transition ${isOpen
-                                ? "bg-yellow-400/10 text-yellow-400"
-                                : "bg-white/[0.04] text-slate-500"
-                                }`}
+                              className={`grid h-9 w-9 shrink-0 place-items-center rounded-lg text-xs font-bold transition ${
+                                isOpen
+                                  ? "bg-yellow-400/10 text-yellow-400"
+                                  : "bg-white/[0.04] text-slate-500"
+                              }`}
                             >
                               {String(index + 1).padStart(2, "0")}
                             </span>
@@ -501,10 +551,11 @@ export default function RulesApp() {
 
                             <ChevronDown
                               size={17}
-                              className={`shrink-0 text-slate-500 transition-transform ${isOpen
-                                ? "rotate-180 text-yellow-400"
-                                : ""
-                                }`}
+                              className={`shrink-0 text-slate-500 transition-transform ${
+                                isOpen
+                                  ? "rotate-180 text-yellow-400"
+                                  : ""
+                              }`}
                             />
                           </button>
 
@@ -546,7 +597,7 @@ export default function RulesApp() {
                           selectSection(
                             ruleSections[
                               ruleSections.findIndex((s) => s.id === active) -
-                              1
+                                1
                             ].id
                           )
                         }
@@ -564,7 +615,7 @@ export default function RulesApp() {
                           selectSection(
                             ruleSections[
                               ruleSections.findIndex((s) => s.id === active) +
-                              1
+                                1
                             ].id
                           )
                         }
