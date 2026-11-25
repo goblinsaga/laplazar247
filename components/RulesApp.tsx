@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
@@ -22,7 +23,7 @@ import {
   Sun,
   Moon,
 } from "lucide-react";
-
+import Image from "next/image";
 import { ruleSections } from "@/data/rules";
 
 const iconMap: Record<string, React.ElementType> = {
@@ -80,6 +81,7 @@ export default function RulesApp() {
   const activeSection =
     ruleSections.find((section) => section.id === active) ?? ruleSections[0];
 
+  // BUSCADOR
   const results = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase("es");
 
@@ -100,6 +102,7 @@ export default function RulesApp() {
     );
   }, [query]);
 
+  // ATAJOS DE TECLADO
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (
@@ -137,6 +140,31 @@ export default function RulesApp() {
     );
   };
 
+  // COMPONENTE DE IMAGEN REUTILIZABLE
+  const RuleImage = ({
+    src,
+    alt,
+  }: {
+    src?: string;
+    alt?: string;
+  }) => {
+    if (!src) return null;
+
+    return (
+      <div className="mt-6 max-w-3xl overflow-hidden rounded-xl border border-yellow-400/20 bg-black/30 shadow-[0_0_25px_rgba(255,213,0,0.05)]">
+        <Image
+          src={src}
+          alt={alt ?? "Imagen de referencia de la regla"}
+          width={1200}
+          height={800}
+          unoptimized
+          className="block h-auto w-full object-contain"
+        />
+      </div>
+    );
+  };
+
+  // SIDEBAR
   const sidebar = (
     <div className="flex h-full flex-col">
       {/* LOGO */}
@@ -436,9 +464,15 @@ export default function RulesApp() {
                           {result.title}
                         </h3>
 
-                        <p className="mt-2 text-sm leading-6 text-slate-400">
+                        <p className="mt-2 whitespace-pre-line text-sm leading-6 text-slate-400">
                           {result.content}
                         </p>
+
+                        {/* IMAGEN EN RESULTADOS DE BÚSQUEDA */}
+                        <RuleImage
+                          src={result.image}
+                          alt={result.imageAlt ?? result.title}
+                        />
 
                         <button
                           onClick={() => selectSection(result.sectionId)}
@@ -569,9 +603,16 @@ export default function RulesApp() {
                                 className="overflow-hidden"
                               >
                                 <div className="border-t border-white/[0.06] px-5 pb-5 pt-4 pl-[68px]">
+                                  {/* TEXTO DE LA REGLA */}
                                   <p className="whitespace-pre-line text-sm leading-7 text-slate-400">
                                     {rule.content}
                                   </p>
+
+                                  {/* IMAGEN DE LA REGLA */}
+                                  <RuleImage
+                                    src={rule.image}
+                                    alt={rule.imageAlt ?? rule.title}
+                                  />
                                 </div>
                               </motion.div>
                             )}
@@ -633,7 +674,7 @@ export default function RulesApp() {
             <footer className="mt-14 border-t border-white/[0.07] pt-6">
               <div className="flex flex-col justify-between gap-2 text-[10px] text-slate-600 sm:flex-row">
                 <span>
-                  © {new Date().getFullYear()} PZRP · Reglamento oficial del
+                  © {new Date().getFullYear()} LA PLAZA 24/7 RP · Reglamento oficial del
                   servidor
                 </span>
 
