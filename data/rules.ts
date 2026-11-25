@@ -18,7 +18,7 @@ export const ruleSections: RuleSection[] = [
     title: "Reglas generales de roleplay",
     icon: "shield",
     rules: [
-{
+      {
         title: "Prohibición del Meta Gaming",
         content: `Queda estrictamente prohibido el Meta Gaming, entendido como utilizar información obtenida fuera del juego para conseguir ventajas dentro del servidor.
 
@@ -30,16 +30,16 @@ Se consideran Meta Gaming las siguientes conductas:
 • Transmitir información obtenida mediante espectadores, transmisiones o comunicaciones externas para intervenir en situaciones del juego.
 
 La información deberá obtenerse mediante los medios permitidos dentro del propio servidor.`,
-      }, 
-{
+      },
+      {
         title: "Prohibición de atropellar",
         content: `Queda prohibido utilizar cualquier tipo de vehículo para atropellar intencionalmente a otros jugadores.
 
 Esta prohibición aplica tanto en situaciones de conflicto como fuera de ellas.
 
 Los accidentes involuntarios no serán considerados automáticamente una infracción; la administración podrá evaluar las circunstancias.`,
-      }, 
-{
+      },
+      {
         title: "Prohibición de Bug Abuse",
         content: `Queda prohibido aprovechar errores, fallos o vulnerabilidades del juego para obtener ventajas indebidas.
 
@@ -50,19 +50,19 @@ En particular:
 • Está prohibido utilizar errores de colisión, animaciones o mecánicas para evitar enfrentamientos, arrestos o secuestros.
 
 Cualquier abuso de bugs podrá ser sancionado por la administración.`,
-      }, 
-{
+      },
+      {
         title: "Prohibición de minas",
         content: `Queda estrictamente prohibido utilizar, colocar o transportar para su utilización minas antipersonales y minas antitanques dentro del servidor.
 
 Esta prohibición aplica a todas las facciones y jugadores, sin excepciones.`,
-      }, 
-{
+      },
+      {
         title: "Equipamiento prohibido",
         content: `Queda prohibido utilizar las bolsas y equipamientos específicos que hayan sido identificados como prohibidos por la administración.
 
 La lista de equipamientos prohibidos deberá estar publicada y acompañada de una referencia visual o del nombre exacto del objeto para evitar confusiones.`,
-      }, 
+      },
     ],
   },
 
@@ -71,7 +71,7 @@ La lista de equipamientos prohibidos deberá estar publicada y acompañada de un
     title: "Armamento y equipamiento",
     icon: "crosshair",
     rules: [
-{
+      {
         title: "Armamento estándar",
         content: `Como regla general, todos los jugadores deberán respetar las siguientes restricciones:
 
@@ -81,14 +81,14 @@ La lista de equipamientos prohibidos deberá estar publicada y acompañada de un
 • El límite de 8 cargadores incluye el cargador colocado en el arma y los 7 restantes en el inventario.
 
 No se permitirá superar estas cantidades mediante el uso de cargadores adicionales en el inventario.`,
-      }, 
-{
+      },
+      {
         title: "Prohibición de balas incendiarias",
         content: `Queda prohibido utilizar munición incendiaria en cualquier arma o vehículo artillado.
 
 Esta prohibición aplica a todas las facciones, rangos y tipos de armamento.`,
-      }, 
-{
+      },
+      {
         title: "Accesorios en armas",
         content: `La mira 1x será el accesorio estándar.
 
@@ -98,8 +98,8 @@ Ningún jugador podrá justificar el uso de accesorios exclusivos alegando que e
 Ejemplo: Mira 3x o balas AP.
 
 El jugador que infrinja esta regla será sancionado por la administración a discreción.`
-      }, 
-{
+      },
+      {
         title: "Límite de armamento especial",
         content: `Cada facción podrá disponer de un máximo de:
 
@@ -109,8 +109,8 @@ El jugador que infrinja esta regla será sancionado por la administración a dis
 
 Estos límites son por facción, no por jugador.
 No se permitirá que varios integrantes utilicen simultáneamente el mismo tipo de armamento especial cuando se haya alcanzado el límite establecido.`,
-      }, 
-{
+      },
+      {
         title: "Barrett",
         content: `Como regla general, el Barrett podrá utilizar un máximo de 4 cargadores.
 
@@ -130,8 +130,8 @@ En este caso:
 • Deberá utilizar exclusivamente mira 1x.
 
 Esta excepción pertenece únicamente al líder principal y no podrá transferirse al segundo o tercer mando.`,
-      }, 
-{
+      },
+      {
         title: "Ametralladoras (Tipo Minimi o Tambor)",
         content: `La ametralladora (Tipo Minimi o Tambor) podrá utilizar un máximo de 2 cargadores:
 
@@ -139,8 +139,8 @@ Esta excepción pertenece únicamente al líder principal y no podrá transferir
 • 1 cargador adicional en el inventario.
 
 No se permitirá portar cargadores adicionales.`,
-      }, 
-{
+      },
+      {
         title: "Lanzagranadas",
         content: `El integrante autorizado para utilizar el lanzagranadas podrá portar un máximo de 7 granadas:
 
@@ -149,8 +149,8 @@ No se permitirá portar cargadores adicionales.`,
 
 No se permitirá superar este límite.
 Cada facción podrá tener únicamente 1 integrante autorizado para utilizar el lanzagranadas y debe estar registrado oficialmente por la administración.`,
-      }, 
-{
+      },
+      {
         title: "Cargadores de 40 balas",
         content: `Cada facción criminal podrá tener únicamente 1 integrante autorizado para utilizar cargadores de 40 balas.
 
@@ -168,10 +168,10 @@ CONDICIONES:
 • Los cargadores de 40 balas no se considerarán cargadores de 30 aunque su descripción indique lo contrario.
 
 Queda prohibido distribuir cargadores de 40 balas entre jugadores que únicamente tengan autorización para utilizar cargadores de 30.`,
-  image: "/cargadores-40.png",
-  imageAlt: "Referencia visual de cargadores de 40 balas",
-      }, 
-{
+        image: "/cargadores-40.png",
+        imageAlt: "Referencia visual de cargadores de 40 balas",
+      },
+      {
         title: "Cargadores de tambor",
         content: `El uso de cargadores de tambor estará limitado a los tres primeros mandos de cada facción.
 Cuando uno de estos mandos decida utilizar un cargador de tambor, podrá portar como máximo:
@@ -182,8 +182,8 @@ Cuando uno de estos mandos decida utilizar un cargador de tambor, podrá portar 
 El límite total será de 5 cargadores, incluyendo el cargador de tambor.
 No se permitirá utilizar más de un cargador de tambor ni sustituir esta restricción por cargadores adicionales.
 El cargador de tambor no autoriza a otros integrantes de la facción a utilizarlo.`,
-      }, 
-{
+      },
+      {
         title: "Armas consideradas Minimi",
         content: `Para efectos de este reglamento, se consideran armas tipo Minimi las siguientes:
 
@@ -199,8 +199,8 @@ Como regla general, las armas de tipo Minimi deberán utilizar
 • Sin silenciador.
 
 No se permitirá instalar accesorios que no estén expresamente autorizados.`,
-      },  
-{
+      },
+      {
         title: "Vehiculos artillados y Monstruos",
         content: `Cada facción podrá disponer de un máximo de 1 vehículo artillado y podran sacarlo 30 minutos después de ser perdido en combate o abandonado.
 
@@ -212,7 +212,7 @@ Esta restricción aplica sin importar el tipo de vehículo, su propietario o la 
 No esta permitido el uso de vehículos artillados para atacar a jugadores que se encuentren en estado civil, sin portar armas o que no representen una amenaza.
 Los vehículos artillados deberán ser utilizados únicamente para enfrentar a jugadores que representen una amenaza real dentro del rol.
 El incumplimiento de estas disposiciones podrá derivar en sanciones administrativas.`,
-      }, 
+      },
     ],
   },
 
@@ -221,7 +221,7 @@ El incumplimiento de estas disposiciones podrá derivar en sanciones administrat
     title: "Líderes y mandos de facción",
     icon: "medal",
     rules: [
-{
+      {
         title: "Líder de facción (primer mando)",
         content: `El líder principal podrá:
 
@@ -235,8 +235,8 @@ La autorización de RPG, mira 3x, silenciador y cargadores AP será exclusiva de
 
 EXCEPCIÓN ESPECÍFICA DEL BARRETT:
 Podrá portar hasta 7 cargadores de Barrett, contando el cargador colocado en el arma, pero deberá utilizar mira 1x.`,
-      }, 
-{
+      },
+      {
         title: "Segundo al mando (segundo mando)",
         content: `El segundo al mando podrá:
 
@@ -245,8 +245,8 @@ Podrá portar hasta 7 cargadores de Barrett, contando el cargador colocado en el
 • Portar un máximo de 2 granadas.
 
 No tendrá autorización automática para utilizar RPG.`,
-      }, 
-{
+      },
+      {
         title: "Tercero al mando (tercer mando)",
         content: `El tercer mando podrá:
 
@@ -255,8 +255,8 @@ No tendrá autorización automática para utilizar RPG.`,
 • Portar un máximo de 1 granada.
 
 No tendrá autorización automática para utilizar RPG.`,
-      }, 
-{
+      },
+      {
         title: "Restricciones para el resto de integrantes",
         content: `Cualquier integrante que no forme parte de los tres primeros mandos de su facción tendrá prohibido:
 
@@ -267,8 +267,8 @@ No tendrá autorización automática para utilizar RPG.`,
 • Recoger y utilizar equipamiento exclusivo de mandos cuando estos sean abatidos.
 
 El incumplimiento podrá ser sancionado por la administración a discresión.`,
-      }, 
-{
+      },
+      {
         title: "Equipamiento de jugadores abatidos",
         content: `Queda prohibido recoger del suelo y utilizar equipamiento exclusivo de los tres primeros mandos de una facción cuando estos sean abatidos.
 El equipamiento protegido incluye:
@@ -280,7 +280,7 @@ El equipamiento protegido incluye:
 
 La prohibición aplica a cualquier integrante de la facción y a jugadores de otras facciones.
 El hecho de que el equipamiento se encuentre en el suelo no significa que haya dejado de ser exclusivo.`,
-      }, 
+      },
     ],
   },
 
@@ -289,7 +289,7 @@ El hecho de que el equipamiento se encuentre en el suelo no significa que haya d
     title: "Fuerzas especiales",
     icon: "users",
     rules: [
-{
+      {
         title: "Límite de integrantes",
         content: `Cada facción podrá tener un máximo de 6 integrantes en sus fuerzas especiales.
 No se permitirá superar este límite mediante cambios temporales de integrantes o la utilización de jugadores no registrados.
@@ -299,8 +299,8 @@ Cada facción deberá mantener una lista oficial y actualizada con los nombres d
 La administración podrá solicitar la lista en cualquier momento.
 Los jugadores que no aparezcan en el registro no podrán reclamar autorización para utilizar dicho equipamiento.
 `,
-      },  
-{
+      },
+      {
         title: "Uniforme, camuflaje y Accesorios",
         content: `Los integrantes de fuerzas especiales podrán utilizar el camuflaje completo correspondiente a su propia facción.
 
@@ -311,8 +311,8 @@ Los integrantes registrados de fuerzas especiales podrán utilizar:
 • Visión nocturna.
 
 Estas autorizaciones no eliminan las restricciones generales de armamento, cargadores ni límites por facción.`,
-      }, 
-{
+      },
+      {
         title: "Responsables de fuerzas especiales",
         content: `La organización deberá contar con:
 
@@ -326,7 +326,7 @@ Armamento del líder de fuerzas especiales:
 • El Segundo Líder de fuerzas especiales podrá portar barrett, mira 1x.
 
 Este armamento será exclusivo de los responsables de fuerzas especiales y es independiente a el granadero y barretero de la facción.`,
-      }, 
+      },
     ],
   },
 
@@ -335,7 +335,7 @@ Este armamento será exclusivo de los responsables de fuerzas especiales y es in
     title: "Arrestos, secuestros y muertes",
     icon: "handcuffs",
     rules: [
-{
+      {
         title: "Tiempo máximo de arresto",
         content: `El tiempo máximo permitido para mantener a un jugador arrestado será de 20 minutos.
 
@@ -345,8 +345,8 @@ Este armamento será exclusivo de los responsables de fuerzas especiales y es in
 • Ninguna facción podrá mantener a una persona detenida por más tiempo alegando que todavía se encuentra realizando un interrogatorio o procedimiento de rol.
 
 La administración podrá intervenir cuando se incumpla este límite.`,
-      }, 
-{
+      },
+      {
         title: "Prohibición de evadir un arresto",
         content: `Queda prohibido evadir un arresto mediante las siguientes acciones:
 
@@ -356,8 +356,8 @@ La administración podrá intervenir cuando se incumpla este límite.`,
 • Utilizar cualquier otro procedimiento para evitar las consecuencias de un arresto en curso.
 
 La infracción será evaluada y sancionada por la administración.`,
-      }, 
-{
+      },
+      {
         title: "Regla de regreso al lugar de muerte",
         content: `Cuando un jugador sea abatido, no podrá regresar inmediatamente al mismo lugar donde murió para reincorporarse al enfrentamiento.
 
@@ -366,7 +366,7 @@ Deberá respetar un tiempo de espera de 5 minutos antes de regresar a esa zona.
 EXCEPCIÓN:
 Se permitirá regresar cuando uno de los tres primeros mandos de su facción se encuentre en esa zona y esté siendo secuestrado.
 Esta excepción no autoriza al jugador a utilizar información externa ni a regresar para intervenir en otros enfrentamientos ajenos al motivo de la excepción.`,
-      }, 
+      },
     ],
   },
 
@@ -375,7 +375,7 @@ Esta excepción no autoriza al jugador a utilizar información externa ni a regr
     title: "Persecuciones y bases",
     icon: "route",
     rules: [
-{
+      {
         title: "Regla de persecución",
         content: `Si un jugador está siendo perseguido por un vehículo del Gobierno o de los Malandros y decide ingresar a su propia base para refugiarse, los perseguidores podrán ingresar a dicha base para continuar la intervención, atacarlo o realizar un secuestro.
 
@@ -387,8 +387,8 @@ Para que esta excepción sea válida deberán cumplirse todas las condiciones:
 4. El ingreso a la base deberá tener como finalidad continuar la persecución existente.
 
 No se permitirá utilizar esta regla para justificar ataques contra bases sin una persecución previa.`,
-      }, 
-{
+      },
+      {
         title: "Límites de la excepción",
         content: `IMPORTANTE:
 
@@ -411,7 +411,7 @@ CONDICIONES DE LA EXCEPCIÓN:
 
 La autorización se limitará exclusivamente a la base donde se encuentre retenido el mando.
 `,
-      },  
+      },
     ],
   },
 
@@ -420,7 +420,7 @@ La autorización se limitará exclusivamente a la base donde se encuentre reteni
     title: "Protección de civiles",
     icon: "shield-check",
     rules: [
-{
+      {
         title: "Condiciones para ser considerado civil",
         content: `Esta regla aplica tanto al Gobierno como a los Malandros.
 
@@ -434,8 +434,8 @@ Para recibir la protección de civil, el jugador deberá cumplir simultáneament
 • No representar una amenaza para otros jugadores.
 
 La protección no será aplicable si el jugador incumple alguna de estas condiciones.`,
-      }, 
-{
+      },
+      {
         title: "Paradas vehiculares",
         content: `Tanto el Gobierno como los Malandros podrán realizar paradas a vehículos civiles.
 
@@ -447,13 +447,13 @@ Durante una parada:
 • Si el conductor se detiene y no representa una amenaza, deberá respetarse su protección de civil.
 
 La negativa a detenerse deberá manifestarse mediante una acción clara de fuga y no únicamente por una demora o confusión.`,
-      }, 
-{
+      },
+      {
         title: "Civiles en zonas de conflicto",
         content: `Si un jugador que se encuentra como civil decide ingresar voluntariamente a una zona donde se está desarrollando un enfrentamiento, perderá la posibilidad de reclamar protección frente a las consecuencias del conflicto en el que se ha involucrado.
 
 Esta excepción no autoriza a disparar contra civiles ajenos al enfrentamiento ni elimina la necesidad de identificar una amenaza o participación real.`,
-      }, 
+      },
     ],
   },
 
@@ -462,7 +462,7 @@ Esta excepción no autoriza a disparar contra civiles ajenos al enfrentamiento n
     title: "Monstruos y helicópteros",
     icon: "helicopter",
     rules: [
-{
+      {
         title: "Monstruos",
         content: `Los monstruos podrán ser desplegados con un intervalo mínimo de 30 minutos.
 
@@ -476,8 +476,8 @@ Si una facción despliega un monstruo y este:
 La facción deberá esperar 30 minutos antes de desplegar otro.
 El tiempo de espera se contará desde que el monstruo anterior deje de estar disponible.
 No se permitirá utilizar otro integrante de la facción para evitar el tiempo de espera.`,
-      }, 
-{
+      },
+      {
         title: "Helicóptero artillado del Gobierno",
         content: `Cuando exista un monstruo activo, el Gobierno tendrá permitido desplegar 1 helicóptero artillado para hacerle frente.
 
@@ -485,7 +485,7 @@ Esta autorización es una excepción vinculada exclusivamente a la existencia de
 Si el Gobierno pierde o le destruyen el helicóptero artillado, deberá esperar 35 minutos antes de desplegar otro.
 El tiempo de espera comenzará a contabilizarse desde la destrucción o pérdida del helicóptero.
 No se permitirá utilizar esta autorización cuando no exista un monstruo activo.`,
-      }, 
+      },
     ],
   },
 
@@ -494,7 +494,7 @@ No se permitirá utilizar esta autorización cuando no exista un monstruo activo
     title: "Alianzas entre carteles",
     icon: "handshake",
     rules: [
-{
+      {
         title: "Prohibición de alianzas",
         content: `Los carteles tienen prohibido establecer alianzas permanentes:
 
@@ -504,22 +504,22 @@ No se permitirá utilizar esta autorización cuando no exista un monstruo activo
 • Reforzarse mutuamente sin una excepción autorizada.
 
 Cada cartel deberá operar de manera independiente.`,
-      }, 
-{
+      },
+      {
         title: "Rol previamente justificado y Secuestro de un mando criminal",
         content: `Se permitirá la unión entre carteles cuando exista un rol que justifique la colaboración.
 Cuando uno de los tres primeros mandos de una facción criminal sea secuestrado, los carteles podrán unirse para intervenir en la situación.
 
 La alianza deberá responder a una situación concreta dentro del juego y no podrá utilizarse como excusa para mantener una cooperación permanente.`,
-      }, 
-{
+      },
+      {
         title: "Limitaciones y finalización de las excepciones",
         content: `Las alianzas autorizadas deberán limitarse a la situación que las justifica.
 
 Una vez finalizada dicha situación, los carteles deberán volver a operar de manera independiente.
 
 No se permitirá utilizar un secuestro como pretexto para mantener patrullajes, operaciones o enfrentamientos conjuntos ajenos al evento.`,
-      }, 
+      },
     ],
   },
 
@@ -528,7 +528,7 @@ No se permitirá utilizar un secuestro como pretexto para mantener patrullajes, 
     title: "Sanciones y administradores",
     icon: "scale",
     rules: [
-{
+      {
         title: "Autoridad administrativa",
         content: `La administración será responsable de supervisar el cumplimiento del presente reglamento. Podrá revisar las circunstancias de cada incidente y determinar si existió una infracción.
         
@@ -557,8 +557,8 @@ MentadoHoly
 Ningun miembro o lider de faccion podra sancionar a otro jugador, solo la administracion podra hacerlo.
 En caso de hacerlo, sera sancionado por la administracion.
         `,
-      }, 
-{
+      },
+      {
         title: "Evidencias",
         content: `Cuando exista una denuncia, la administración podrá solicitar evidencias como:
 
@@ -567,16 +567,16 @@ En caso de hacerlo, sera sancionado por la administracion.
 • Registros disponibles del servidor.
 • Testimonios de los participantes.
 • Cualquier otro elemento que permita esclarecer los hechos.`,
-      }, 
-{
+      },
+      {
         title: "Interpretación de las reglas",
         content: `Las excepciones deberán estar expresamente contempladas en este reglamento.
 
 Ningún jugador podrá crear, ampliar o modificar una excepción por decisión propia.
 En caso de contradicción entre una regla general y una excepción específica, prevalecerá la excepción únicamente dentro de los límites que establece.
 Las modificaciones oficiales deberán ser comunicadas por la administración.`,
-      }, 
-{
+      },
+      {
         title: "Sanciones",
         content: `El incumplimiento de cualquiera de las disposiciones podrá derivar en una sanción administrativa.
 La sanción deberá considerar:
@@ -587,8 +587,8 @@ La sanción deberá considerar:
 • La reincidencia del jugador.
 
 La administración determinará la medida correspondiente de acuerdo con cada caso.`,
-      }, 
-{
+      },
+      {
         title: "Cumplimiento obligatorio",
         content: `El presente reglamento es de cumplimiento obligatorio para todos los jugadores del servidor, independientemente de su facción, rango o antigüedad.
 
@@ -599,8 +599,73 @@ Solo serán válidas las excepciones expresamente establecidas en este reglament
 Todo jugador deberá conocer y respetar las normas antes de participar en el servidor.
 
 El respeto al reglamento garantiza un entorno de roleplay justo, organizado y equilibrado para todos los participantes.`,
-      }, 
+      },
     ],
+  },
+
+  {
+    id: "dealer",
+    title: "El Dealer",
+    icon: "briefcase",
+    rules: [
+      {
+        title: "Venta clandestina de armamento",
+        content: `El Dealer tiene permitido comercializar armamento de manera clandestina con las organizaciones criminales y jugadores autorizados.
+
+Todas las transacciones deberán realizarse bajo el contexto de una actividad ilegal dentro del servidor. El Dealer podrá ofrecer armamento y equipamiento que no se encuentre disponible mediante los canales legales habituales.
+
+La existencia del Dealer no otorga permiso para ignorar las restricciones generales de armamento establecidas en el reglamento.
+
+Los Dealers oficiales son:
+EL_ARQUI
+Yul
+`
+      },
+      {
+        title: "Venta de armamento de alto poder",
+        content: `El armamento perforante (AP) y las granadas únicamente podrán ser adquiridos por los mandos autorizados de las organizaciones criminales.
+
+Se consideran mandos autorizados el líder principal, segundo al mando y tercer mando oficialmente reconocidos.
+
+Queda estrictamente prohibido que el Dealer venda este tipo de armamento a miembros comunes, civiles u otros jugadores que no cumplan con dicha condición.
+
+Los mandos serán responsables del uso y distribución del armamento adquirido.`
+      },
+      {
+        title: "Uniformes y vehículos gubernamentales clonados",
+        content: `El Dealer podrá proporcionar a las organizaciones criminales uniformes clonados o réplicas de los utilizados por las instituciones gubernamentales, así como vehículos con apariencia o características similares a los oficiales.
+
+Este equipamiento podrá utilizarse para desarrollar actividades de infiltración, suplantación y operaciones criminales dentro del rol.
+
+La adquisición de estos artículos no convierte al jugador en miembro de una institución gubernamental ni le otorga autoridad, privilegios o inmunidad policial.`
+      },
+      {
+        title: "Prohibición de almacenar artículos del Dealer",
+        content: `Todo armamento, uniforme, equipamiento o vehículo adquirido mediante el Dealer deberá utilizarse conforme a la actividad criminal para la que fue obtenido.
+
+Los jugadores que adquieran estos artículos no tendrán permitido guardarlos, almacenarlos, transferirlos a inventarios personales, depositarlos en almacenes ni conservarlos para utilizarlos posteriormente.
+
+Una vez finalizada la situación o actividad para la que fueron adquiridos, los artículos deberán ser retirados del uso del jugador conforme a los mecanismos establecidos por la administración.
+
+Esta restricción busca evitar la acumulación de armamento y equipamiento clandestino para futuras situaciones de rol.`
+      },
+      {
+        title: "Responsabilidad de las organizaciones criminales",
+        content: `Los líderes y mandos de cada organización criminal serán responsables de garantizar que sus integrantes respeten las condiciones de adquisición y utilización del equipamiento proporcionado por el Dealer.
+
+Ninguna organización podrá justificar una infracción alegando desconocimiento de las restricciones de compra, almacenamiento o uso.
+
+El incumplimiento de estas disposiciones podrá derivar en sanciones individuales y organizacionales, dependiendo de la gravedad de la falta.`
+      },
+      {
+        title: "Supervisión y sanciones",
+        content: `La administración se reserva el derecho de supervisar las actividades relacionadas con el Dealer y verificar que las transacciones se realicen conforme a este reglamento.
+
+Cualquier abuso, distribución no autorizada, almacenamiento indebido o utilización del equipamiento para obtener ventajas injustas podrá ser sancionado por la administración.
+
+La administración tendrá la última palabra en la interpretación y aplicación de estas disposiciones.`
+      }
+    ]
   },
 
 ];
